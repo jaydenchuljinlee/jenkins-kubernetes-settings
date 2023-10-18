@@ -1,5 +1,10 @@
 node {
+    tool {
+        gradle 7.0
+    }
     stage("Gradle Build"){
-        sh './gradlew build'
+        widthGradle {
+            sh './gradlew build'
+        }
     }
 }

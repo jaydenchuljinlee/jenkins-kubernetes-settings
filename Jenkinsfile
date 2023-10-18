@@ -1,6 +1,6 @@
 node {
+    def path = tool name: "gradle7.0", type: "gradle"
     stage("Gradle Build"){
-        tool name: "gradle7.0", type: "gradle"
-        sh "./gradle build"
+        sh "${path}/gradlew build"
     }
 }
